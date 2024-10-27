@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clone the GitHub repository containing the registration form project
-                git branch: 'main', url: 'https://github.com/username/registration-form-repo'
+                git branch: 'main', url: 'https://github.com/Sahasra-Nakka/Regis.git'
             }
         }
         
@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // Lint the HTML file using htmlhint
                     // Assumes htmlhint is installed on the Jenkins node
-                    def htmlLintResult = sh(script: 'htmlhint index.html --config .htmlhintrc', returnStatus: true)
+                    def htmlLintResult = sh(script: 'htmlhint regis.html --config .htmlhintrc', returnStatus: true)
                     if (htmlLintResult != 0) {
                         error "HTML Linting failed!"
                     }
