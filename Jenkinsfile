@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clone the GitHub repository containing the registration form project
-                git branch: 'main', url: 'https://github.com/Sahasra-Nakka/Regis.git'
+                git branch: 'master', url: 'https://github.com/Sahasra-Nakka/Regis.git'
             }
         }
         
